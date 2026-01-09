@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick QR</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- ヘッダー -->
+    <header class="header">
+      <h1 class="title">📱 このページをQRで開く</h1>
+      <p class="subtitle">スマホでカメラを向けて開けます</p>
+    </header>
+
+    <!-- URL表示エリア -->
+    <div class="url-section">
+      <div class="url-display" id="urlDisplay" title="クリックでコピー"></div>
+    </div>
+
+    <!-- QRコード表示エリア -->
+    <div class="qr-section">
+      <div class="qr-container" id="qrContainer">
+        <canvas id="qrCanvas"></canvas>
+        <div class="qr-loading" id="qrLoading">QRコード生成中...</div>
+      </div>
+    </div>
+
+    <!-- サイズ選択 -->
+    <div class="size-section">
+      <label for="sizeSelect">QRサイズ:</label>
+      <select id="sizeSelect">
+        <option value="small">小</option>
+        <option value="medium" selected>中</option>
+        <option value="large">大</option>
+      </select>
+    </div>
+
+    <!-- アクションボタン -->
+    <div class="actions">
+      <button class="btn btn-primary" id="copyBtn">
+        <span class="btn-icon">📋</span>
+        URLをコピー
+      </button>
+      <button class="btn btn-secondary" id="saveBtn">
+        <span class="btn-icon">💾</span>
+        QRを画像として保存
+      </button>
+    </div>
+
+    <!-- メッセージエリア -->
+    <div class="message-area" id="messageArea"></div>
+  </div>
+
+  <script src="lib/qrcode.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
