@@ -1,4 +1,5 @@
 # Quick QR
+<img width="655" height="639" alt="スクリーンショット 2026-01-09 19 19 17" src="https://github.com/user-attachments/assets/6bf29476-54e5-4e12-9210-b788e7100efb" />
 
 PCで見ているページを、スマホで「その場で」すぐ開ける Chrome 拡張
 
